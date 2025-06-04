@@ -12,7 +12,6 @@ from langchain_tavily import TavilySearch  # type: ignore[import-not-found]
 
 from react_agent.configuration import Configuration
 import react_agent.utils as utils
-import react_agent.call_geochat as call_geochat
 
 from langchain_core.messages import HumanMessage
 from langchain_core.tools import InjectedToolArg

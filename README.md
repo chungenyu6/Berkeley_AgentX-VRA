@@ -115,11 +115,11 @@ By default, the following models are assumed to be loaded when executing VRA:
 
 Note that at this stage, you should have your models ready for inference and within the `vra` conda environment.
 
-Navigate to the `/src` folder and launch the agent app.
+Navigate to the `ROOT_FOLDER/src` folder and launch the agent app. Note, it's the first `src` folder under the root folder.
 
 
 ```bash
-cd src && langgraph dev
+cd ROOT_FOLDER/src && langgraph dev
 ```
 
 Open another terminal, and activate the `vra` conda environment, then navigate to the root folder.

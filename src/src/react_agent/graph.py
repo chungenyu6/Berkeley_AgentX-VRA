@@ -14,7 +14,6 @@ from react_agent.configuration import Configuration
 from react_agent.state import InputState, State
 from react_agent.tools import TOOLS
 import react_agent.utils as utils
-import react_agent.call_geochat as call_geochat
 
 GRAPH_NAME = "VRA"
 
@@ -70,7 +69,7 @@ async def draft_respond(state: State) -> Dict[str, List[AIMessage]]:
     return {"messages": [response]}
 
 async def send_query(state: State) -> Dict[str, List[AIMessage]]:
-    """inquirer node: Send a question from the latest response to the geochat tool."""
+    """inquirer node: Send a question from the latest response to the tool."""
     
     model = utils.load_reasoning_model().bind_tools(TOOLS) # no tool_choice, the model can use all the provided tools
     usr_msg = "Extract one question from the latest response. Then, invoke the ALL the tools using this same extracted question. You MUST generate separate tool calls in your response with the same question argument."
